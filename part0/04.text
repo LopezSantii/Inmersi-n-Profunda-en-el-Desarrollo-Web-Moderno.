@@ -4,7 +4,8 @@ El usuario introduce texto y hace clic en el botón de enviar.
 
 Navegador -> Servidor: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
 
-El servidor crea un nuevo objeto nota y lo añade a un array llamado notas. Luego, responde redirigiendo a https://studies.cs.helsinki.fi/exampleapp/notes.
+El servidor crea un nuevo objeto nota y lo añade a un array llamado notas.
+Luego, responde redirigiendo a https://studies.cs.helsinki.fi/exampleapp/notes.
 
 Navegador -> Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
 Servidor --> Navegador: Código HTML
