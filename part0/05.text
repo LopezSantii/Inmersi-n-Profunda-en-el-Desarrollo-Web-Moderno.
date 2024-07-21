@@ -1,0 +1,15 @@
+Diagrama de secuencia de la aplicación de una sola página (SPA)
+
+Navegador -> Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Servidor --> Navegador: Código HTML
+Navegador -> Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Servidor --> Navegador: main.css
+Navegador -> Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+Servidor --> Navegador: spa.js
+
+El navegador empieza a ejecutar el código JavaScript  que solicita datos JSON del servidor.
+
+Navegador -> Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Servidor --> Navegador: [{ content: "", date: "2022-08-19T21:05:40.348Z" }, ...]
+
+El navegador ejecuta el manejador de eventos que renderiza las notas para mostrarlas.
