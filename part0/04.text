@@ -1,0 +1,22 @@
+Diagrama de secuencia de la página web de nueva nota
+
+El usuario introduce texto y hace clic en el botón de enviar.
+
+Navegador -> Servidor: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+El servidor crea un nuevo objeto nota y lo añade a un array llamado notas. Luego, responde redirigiendo a https://studies.cs.helsinki.fi/exampleapp/notes.
+
+Navegador -> Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Servidor --> Navegador: Código HTML
+Navegador -> Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Servidor --> Navegador: main.css
+Navegador -> Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Servidor --> Navegador: main.js
+
+El navegador empieza a ejecutar el código JavaScript que solicita datos JSON del servidor.
+
+Navegador -> Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Servidor --> Navegador: [{ content: "", date: "2022-08-19T21:05:40.348Z" }, ...]
+
+El navegador ejecuta el manejador de eventos que renderiza las notas para mostrarlas.
+
