@@ -1,0 +1,9 @@
+El usuario introduce texto y hace clic en el botón de enviar. 
+El navegador ejecuta el manejador de eventos. 
+Previene el evento predeterminado de envío del formulario. 
+Usa los datos de entrada para crear un nuevo objeto de nota y lo añade a un array llamado notas, 
+renderizando las notas para mostrarlas.
+
+Navegador -> Servidor: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+Envía este nuevo objeto de nota serializado en formato JSON al servidor.
